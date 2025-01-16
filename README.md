@@ -5,7 +5,7 @@ Team - Alpharius
 Jonathan Tran - Project Manager and Data Analyst
 
 (image)
-Kazuki Susuki - 
+Kazuki Susuki - Client Liaison and Data Visualizer
 
 (image)
 Jeampy Kalambayi
