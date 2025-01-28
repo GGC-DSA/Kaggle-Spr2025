@@ -8,7 +8,7 @@ Jonathan Tran - Project Manager and Data Analyst
 Kazuki Susuki - Client Liaison and Data Visualizer
 
 
-Jeampy Kalambayi
+Jeampy Kalambayi - Data Modeler and Project Documentation
 
 ### Description
 This is a repo for the Natural Language Processing with Disaster Tweets (NLP with Disaster Tweets) Kaggle Competition. Due to the english language having certain words
