@@ -22,7 +22,7 @@ Below are the listed models used for Natural Language Processing. Please see mod
 Support Vector Machine (SVMs) is a supervised learning model that is used for classification, regression, and outliers detection. 
 This type of algorithm allows data to be serparated by margins and put into certain classifications. The results for SVMs are determined 
 based on the data and parameters are used. In this case, kernel RBF is determined to be the best SVM result based on classification report. 
-###
+### BERT
 BERT(Bidirectional Encoder Representations from Transformers) is a context-sensitive learning model used for classification tasks. It is an encoder-only
 model that encodes input sequences into high dimensional embeddings.
 
