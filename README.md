@@ -15,4 +15,12 @@ This is a repo for the Natural Language Processing with Disaster Tweets (NLP wit
 be slang and not quite literal to the intended meaning of the actual word, some tweets may sound off. This project is an attempt to create a Natural Language Process code
 that deciphers and identifies whether a tweets is announcing a literal disaster or if the tweet is being metaphorical. 
 
+## Models Used
+Below are the listed models used for Natural Language Processing. Please see model's notebook for results.
+
+### Support Vector Machine
+Support Vector Machine (SVMs) is a supervised learning model that is used for classification, regression, and outliers detection. 
+This type of algorithm allows data to be serparated by margins and put into certain classifications. The results for SVMs are determined 
+based on the data and parameters are used. In this case, kernel RBF is determined to be the best SVM result based on classification report. 
+
 Kaggle Link: https://www.kaggle.com/competitions/nlp-getting-started/data
