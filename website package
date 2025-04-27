@@ -1,0 +1,350 @@
+/home/yourusername/
+    app.py
+    /static/
+       style.css
+       dataset.zip
+       project1pcamodel.zip
+       BERT_V1.zip
+       SVM.zip
+       tools.png
+       tweet_length.png
+       disaster_wordcloud.png
+       model_accuracy.png
+       model_accuracy2.png
+       svm_accuracy.png
+    /templates/
+       index.html
+       pca.html
+       bert.html
+       svm.html
+***************************************************************************************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disaster Tweet Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Disaster Tweet Classifier</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/pca">PCA Model</a>
+            <a href="/bert">BERT Model</a>
+            <a href="/svm">SVM Model</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>📘 Project Description</h2>
+            <p>In today's digital age, social media platforms like Twitter play a critical role in how people share information during emergencies. This project leverages Natural Language Processing (NLP) and machine learning to automatically classify tweets related to real disasters.</p>
+            <p>By training models on thousands of labeled tweets, our system is designed to detect whether a tweet is reporting an actual disaster or simply mentioning related keywords metaphorically. This helps emergency response teams, journalists, and humanitarian organizations identify urgent situations more quickly and accurately.</p>
+        </section>
+
+        <section>
+            <h2>👨‍💻 Team Members</h2>
+            <ul>
+                <li>Jonathan Tran – Project Manager and Data Analyst</li>
+                <li>Kazuki Susuki – Client Liaison and Data Visualizer</li>
+                <li>Jeampy Kalambayi – Data Modeler and Documentation Lead</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🤝 Project Client</h2>
+            <ul><li>Dr. Cengiz Gunay</li></ul>
+        </section>
+
+        <section>
+            <h2>🧰 Tools and Technologies</h2>
+            <ul>
+                <li><strong>Programming Language:</strong> Python</li>
+                <li><strong>Libraries:</strong> Pandas, NumPy, Scikit-learn, Seaborn, Matplotlib</li>
+                <li><strong>NLP Tools:</strong> TF-IDF Vectorizer, Tokenizer</li>
+                <li><strong>ML Models:</strong> Logistic Regression, PCA, BERT, SVM</li>
+                <li><strong>Platform:</strong> Jupyter Notebook, Flask, PythonAnywhere</li>
+            </ul>
+            <p>📷 Below is a visual overview of the tools used:</p>
+            <img src="/static/tools.png" alt="Technologies and Tools">
+        </section>
+
+        <section>
+            <h2>📂 Dataset Source</h2>
+            <p>The dataset used in this project comes from a Kaggle competition titled <strong>"Natural Language Processing with Disaster Tweets."</strong></p>
+            <p>It contains over 10,000 tweets that have been manually labeled as either:</p>
+            <ul>
+                <li>1 (Disaster): Tweet is referring to an actual disaster or emergency event</li>
+                <li>0 (Non-Disaster): Tweet uses disaster words metaphorically or in unrelated context</li>
+            </ul>
+            <p>It includes:</p>
+            <ul>
+                <li>train.csv – training data</li>
+                <li>test.csv – for predictions</li>
+                <li>sample_submission.csv – submission format for Kaggle</li>
+            </ul>
+            <p>🔗 <a href="https://www.kaggle.com/competitions/nlp-getting-started" target="_blank">Click here to view and download the dataset from Kaggle »</a></p>
+
+
+             <p>💾 <a href="/static/dataset.zip" download>Click here to directly download the dataset ZIP file »</a></p>
+
+        </section>
+
+        <section>
+            <h2>📊 Visualizations</h2>
+            <p>To better understand the structure and insights of the tweet data, we generated several visualizations. These include:</p>
+            <ul>
+                <li>Tweet Length Distribution Chart</li>
+                <li>Word Cloud of Disaster Tweets</li>
+                <li>Model Accuracy Comparison Charts</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>📝 Tweet Length Distribution</h2>
+            <img src="/static/tweet_length.png" alt="Tweet Length Distribution Chart">
+            <p><strong>Explanation:</strong><br>
+            The chart shows how tweet lengths vary across the dataset. Peaks indicate common tweet lengths. This helps detect spam or unusually short/long entries.</p>
+        </section>
+
+        <section>
+            <h2>🌩️ Word Cloud: Disaster Tweets</h2>
+            <img src="/static/disaster_wordcloud.png" alt="Word Cloud of Disaster Tweets">
+            <p><strong>Explanation:</strong><br>
+            This word cloud shows the most frequent terms appearing in disaster-related tweets. Larger words are more common.</p>
+        </section>
+
+        <section>
+            <h2>📌 Accuracy Comparison Number</h2>
+            <img src="/static/model_accuracy.png" alt="Accuracy Comparison Chart">
+        </section>
+
+        <section>
+            <h2>📈 Model Accuracy Comparison</h2>
+            <img src="/static/model_accuracy2.png" alt="Model Accuracy Comparison Chart">
+            <p><strong>Explanation:</strong> This chart shows the performance of Logistic Regression, PCA-enhanced models, BERT, and SVM classifiers.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Disaster Tweet Classifier Team</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCA Model - Disaster Tweet Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Disaster Tweet Classifier</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/pca">PCA Model</a>
+            <a href="/bert">BERT Model</a>
+            <a href="/svm">SVM Model</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>📘 What is PCA?</h2>
+            <p>PCA (Principal Component Analysis) is a dimensionality reduction technique that transforms high-dimensional data into a smaller set of features while preserving variance. It helps simplify complex data structures, making them easier to visualize and model.</p>
+        </section>
+
+        <section>
+            <h2>💡 Why PCA?</h2>
+            <ul>
+                <li>Improves computational efficiency by reducing dimensions</li>
+                <li>Highlights patterns in high-dimensional, sparse data</li>
+                <li>Serves as input for logistic regression to improve accuracy</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🧪 PCA Results</h2>
+            <p>We applied PCA to the TF-IDF encoded tweets and reduced the data to two dimensions. This helped in visualizing tweet clusters more clearly.</p>
+            <img src="/static/pca_scatter.png" alt="PCA Scatter Plot">
+        </section>
+
+        <section>
+            <h2>📈 PCA Accuracy</h2>
+            <img src="/static/pca_accuracy.png" alt="PCA Accuracy">
+            <p><strong>Explanation:</strong> This chart shows the accuracy comparison between Logistic Regression and PCA-enhanced models, alongside other classifiers like BERT and SVM.</p>
+        </section>
+
+        <section>
+            <h2>💻 GitHub Source</h2>
+            <a href="https://github.com/GGC-DSA/Kaggle-Spr2025/blob/ac7f955704be72d79a34803e6aca5f67615fa7f4/project1pcamodel.ipynb" target="_blank">
+                🔗 View PCA Notebook on GitHub
+            </a>
+            <p>💾 <a href="/static/project1pcamodel.zip" download>Click here to download the PCA Notebook ZIP file »</a></p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Disaster Tweet Classifier Team</p>
+    </footer>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BERT Model - Disaster Tweet Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Disaster Tweet Classifier</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/pca">PCA Model</a>
+            <a href="/bert">BERT Model</a>
+            <a href="/svm">SVM Model</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>📘 What is BERT?</h2>
+            <p>BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based model pre-trained on large corpora. It captures deep semantic meaning by understanding context from both directions.</p>
+        </section>
+
+        <section>
+            <h2>💡 Why Use BERT?</h2>
+            <ul>
+                <li>Provides state-of-the-art performance on NLP tasks</li>
+                <li>Understands contextual word relationships</li>
+                <li>Works well with tweet-level short text classification</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🧪 Fine-tuning BERT</h2>
+            <p>We fine-tuned BERT on the disaster tweet dataset to classify tweets as real or not. It achieved the highest accuracy among all models tested.</p>
+        </section>
+
+        <section>
+            <h2>📈 BERT Accuracy</h2>
+            <img src="/static/bert_accuracy.png" alt="BERT Accuracy Chart">
+            <p><strong>Explanation:</strong> BERT outperformed other models by learning contextual patterns in the tweet text, even with limited training examples.</p>
+        </section>
+
+        <section>
+            <h2>💻 GitHub Source</h2>
+            <a href="https://github.com/GGC-DSA/Kaggle-Spr2025" target="_blank">
+                🔗 View Full Project on GitHub
+            </a>
+                <p>🔗 <a href="hhttps://github.com/GGC-DSA/Kaggle-Spr2025/blob/ac7f955704be72d79a34803e6aca5f67615fa7f4/SVM.ipynb" target="_blank">View BERT Notebook on GitHub</a></p>
+                <p>💾 <a href="/static/BERT_V1.zip" download>Click here to download the BERT Notebook ZIP file »</a></p>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Disaster Tweet Classifier Team</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVM Model - Disaster Tweet Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Disaster Tweet Classifier</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/pca">PCA Model</a>
+            <a href="/bert">BERT Model</a>
+            <a href="/svm">SVM Model</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>📘 What is SVM?</h2>
+            <p>SVM (Support Vector Machine) is a powerful supervised learning model ideal for binary classification. It works by finding the optimal boundary that separates classes.</p>
+        </section>
+
+        <section>
+            <h2>💡 Why SVM?</h2>
+            <ul>
+                <li>Effective for small and medium-sized datasets</li>
+                <li>Handles high-dimensional sparse data (like TF-IDF) well</li>
+                <li>Works efficiently with linear or non-linear kernels</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🧪 SVM Implementation</h2>
+            <p>We applied SVM with linear kernel on the TF-IDF-transformed tweet data. It provided reliable and interpretable results.</p>
+        </section>
+
+        <section>
+            <h2>📈 SVM Accuracy</h2>
+             <img src="/static/svm_accuracy.png" alt="SVM Accuracy Comparison" style="max-width: 100%; height: auto; margin-top: 20px;">
+
+            <p><strong>Explanation:</strong> SVM gave competitive accuracy and proved to be fast and consistent across testing scenarios.</p>
+        </section>
+
+        <section>
+            <h2>💻 GitHub Source</h2>
+            <a href="https://github.com/GGC-DSA/Kaggle-Spr2025" target="_blank">
+                🔗 View Full Project on GitHub
+            </a>
+
+               <p>🔗 <a href="https://github.com/GGC-DSA/Kaggle-Spr2025/blob/ac7f955704be72d79a34803e6aca5f67615fa7f4/SVM.ipynb" target="_blank">View SVM Notebook on GitHub »</a></p>
+
+               <p>💾 <a href="/static/SVM.zip" download>Click here to download the SVM Notebook ZIP file »</a></p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Disaster Tweet Classifier Team</p>
+    </footer>
+</body>
+</html>
+
+**flask_app.py**
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/pca')
+def pca():
+    return render_template('pca.html')
+
+@app.route('/bert')
+def bert():
+    return render_template('bert.html')
+
+@app.route('/svm')
+def svm():
+    return render_template('svm.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
