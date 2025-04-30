@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCA Model - Disaster Tweet Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Disaster Tweet Classifier</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/pca">PCA Model</a>
+            <a href="/bert">BERT Model</a>
+            <a href="/svm">SVM Model</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>📘 What is PCA?</h2>
+            <p>PCA (Principal Component Analysis) is a dimensionality reduction technique that transforms high-dimensional data into a smaller set of features while preserving variance. It helps simplify complex data structures, making them easier to visualize and model.</p>
+        </section>
+
+        <section>
+            <h2>💡 Why PCA?</h2>
+            <ul>
+                <li>Improves computational efficiency by reducing dimensions</li>
+                <li>Highlights patterns in high-dimensional, sparse data</li>
+                <li>Serves as input for logistic regression to improve accuracy</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🧪 PCA Results</h2>
+            <p>We applied PCA to the TF-IDF encoded tweets and reduced the data to two dimensions. This helped in visualizing tweet clusters more clearly.</p>
+            <img src="/static/pca_scatter.png" alt="PCA Scatter Plot">
+        </section>
+
+        <section>
+            <h2>📈 PCA Accuracy</h2>
+            <img src="/static/pca_accuracy.png" alt="PCA Accuracy">
+            <p><strong>Explanation:</strong> This chart shows the accuracy comparison between Logistic Regression and PCA-enhanced models, alongside other classifiers like BERT and SVM.</p>
+        </section>
+
+        <section>
+            <h2>💻 GitHub Source</h2>
+            <a href="https://github.com/GGC-DSA/Kaggle-Spr2025/blob/ac7f955704be72d79a34803e6aca5f67615fa7f4/project1pcamodel.ipynb" target="_blank">
+                🔗 View PCA Notebook on GitHub
+            </a>
+            <p>💾 <a href="/static/project1pcamodel.zip" download>Click here to download the PCA Notebook ZIP file »</a></p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Disaster Tweet Classifier Team</p>
+    </footer>
+</body>
+</html>
