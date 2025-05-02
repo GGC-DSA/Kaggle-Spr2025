@@ -68,8 +68,8 @@ model that encodes input sequences into high dimensional embeddings.
 ![BERT Accuracy](docs/bert_accuracy2.png)
 ![SVM Accuracy](docs/svm_accuracy2.png)
 ![PCA Accuracy](docs/pca_accuracy.png)
-![TSNE Graph](docs/TSNE graph.png)
-![ROC Curve](docs/bert_validation ROC Curve.png)
+![TSNE Graph](docs/TSNEgraph.png)
+![ROC Curve](docs/bert_validationROCCurve.png)
 ## TODO:
 Optimization: We want to focus on increasing the accuracy of the BERT model to get a higher place on the scoreboard for the Kaggle Competition.
 
