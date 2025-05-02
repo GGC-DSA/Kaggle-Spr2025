@@ -9,13 +9,13 @@ Kaggle Link: https://www.kaggle.com/competitions/nlp-getting-started/overview
 https://jeampy.pythonanywhere.com
 
 ## Final Notebook
-
+[Notebook](https://github.com/GGC-DSA/Kaggle-Spr2025/blob/main/code/Collective_Notebook.ipynb)
 
 ## Poster
 https://drive.google.com/file/d/1lTDobSUjzXcmn8aI_4vq4aRdgQglRHlf/view?usp=sharing
 
 ## Final Report
-
+[Report](https://github.com/GGC-DSA/Kaggle-Spr2025/blob/main/docs-SPR2025/Kaggle%20Spring%202025%20Final%20Project%20Report.pdf) 
 # Kaggle-Spr2025 Team
 Team - Alpharius
 
@@ -28,6 +28,10 @@ Kazuki Susuki - Client Liaison and Data Visualizer
 
 
 Jeampy Kalambayi - Data Modeler and Project Documentation
+
+## Project Events
+STARS - Georgia Gwinnett College – 4/17/2025
+CREATE Symposium - Georgia Gwinnett College – 4/24/2025
 
 ## Technologies
 Google Colab - Used for data cleaning, analysis, visualization, and model training.
@@ -61,7 +65,11 @@ BERT (Bidirectional Encoder Representations from Transformers) is a context-sens
 model that encodes input sequences into high dimensional embeddings.
 
 ## Main Results
-
+![BERT Accuracy](docs/bert_accuracy2.png)
+![SVM Accuracy](docs/svm_accuracy2.png)
+![PCA Accuracy](docs/pca_accuracy.png)
+![TSNE Graph](docs/TSNE graph.png)
+![ROC Curve](docs/bert_validation ROC Curve.png)
 ## TODO:
 Optimization: We want to focus on increasing the accuracy of the BERT model to get a higher place on the scoreboard for the Kaggle Competition.
 
