@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BERT Model - Disaster Tweet Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Disaster Tweet Classifier</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/pca">PCA Model</a>
+            <a href="/bert">BERT Model</a>
+            <a href="/svm">SVM Model</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>📘 What is BERT?</h2>
+            <p>BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based model pre-trained on large corpora. It captures deep semantic meaning by understanding context from both directions.</p>
+        </section>
+
+        <section>
+            <h2>💡 Why Use BERT?</h2>
+            <ul>
+                <li>Provides state-of-the-art performance on NLP tasks</li>
+                <li>Understands contextual word relationships</li>
+                <li>Works well with tweet-level short text classification</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🧪 Fine-tuning BERT</h2>
+            <p>We fine-tuned BERT on the disaster tweet dataset to classify tweets as real or not. It achieved the highest accuracy among all models tested.</p>
+        </section>
+
+
+
+
+        <section>
+            <h2>📈 BERT Accuracy</h2>
+            <img src="/static/bert_accuracy2.png" alt="BERT ROC Curve Accuracy" style="max-width: 100%; height: auto;">
+            <p><strong>Explanation:</strong> BERT outperformed other models by learning contextual patterns in the tweet text, even       with limited training examples.</p>
+
+        </section>
+
+
+        <section>
+            <h2>📈 BERT Validation </h2>
+            <img src="/static/bert_validation ROC Curve.png" alt="BERT ROC Curve Accuracy" style="max-width: 100%; height: auto;">
+            <p><strong>Explanation:</strong> The ROC Curve depicts the overall performance of the model. It measures true positive
+            rate against false positive rate. The closer the curve is to the top left corner of the graph, the higher the
+            performance of the model.</p>
+        </section>
+
+
+        <section>
+            <h2>💻 GitHub Source</h2>
+            <a href="https://github.com/GGC-DSA/Kaggle-Spr2025" target="_blank">
+                🔗 View Full Project on GitHub
+            </a>
+                <p>🔗 <a href="hhttps://github.com/GGC-DSA/Kaggle-Spr2025/blob/ac7f955704be72d79a34803e6aca5f67615fa7f4/SVM.ipynb" target="_blank">View BERT Notebook on GitHub</a></p>
+                <p>💾 <a href="/static/BERT_V1.zip" download>Click here to download the BERT Notebook ZIP file »</a></p>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Disaster Tweet Classifier Team</p>
+    </footer>
+</body>
+</html>
